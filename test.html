@@ -25,7 +25,7 @@
         // for sending the WhatsApp message
         $.ajax({
           type: 'POST',
-          url: '/send-whatsapp-message', // Replace with your server-side endpoint
+          url: 'https://api.whatsapp.com/send?phone', // Replace with your server-side endpoint
           data: JSON.stringify(selectedProducts),
           contentType: 'application/json',
           success: function(response) {
