@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <ul id="productList">
+    <!-- Your product list items here -->
+  </ul>
+
+  <button id="checkoutButton">Checkout</button>
+
+  <script>
+    $(document).ready(function() {
+      $('#checkoutButton').click(function() {
+        var selectedProducts = [];
+
+        // Iterate through each product item and add it to the selectedProducts array
+        $('#productList li').each(function() {
+          var product = $(this).text();
+          selectedProducts.push(product);
+        });
+
+        // Send the selectedProducts array to the server-side endpoint or API
+        // for sending the WhatsApp message
+        $.ajax({
+          type: 'POST',
+          url: '/send-whatsapp-message', // Replace with your server-side endpoint
+          data: JSON.stringify(selectedProducts),
+          contentType: 'application/json',
+          success: function(response) {
+            console.log('WhatsApp message sent successfully!');
+          },
+          error: function(xhr, status, error) {
+            console.error('Error sending WhatsApp message:', error);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
