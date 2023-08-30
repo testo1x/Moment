@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Your Website Title</title>
+    <style>
+        /* Add your custom CSS styles here */
+    </style>
+    <script>
+        function sendOrderToWhatsApp() {
+            // Replace the placeholders with your actual WhatsApp API details
+            var phoneNumber = "YOUR_PHONE_NUMBER";
+            var message = "Order details: ..."; // Add the order details here
+            
+            // Construct the WhatsApp URL
+            var url = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+            
+            // Open the WhatsApp URL in a new tab
+            window.open(url, "_blank");
+        }
+    </script>
 </head>
 <body>
-  <ul id="productList">
-    <!-- Your product list items here -->
-  </ul>
-
-  <button id="checkoutButton">Checkout</button>
-
-  <script>
-    $(document).ready(function() {
-      $('#checkoutButton').click(function() {
-        var selectedProducts = [];
-
-        // Iterate through each product item and add it to the selectedProducts array
-        $('#productList li').each(function() {
-          var product = $(this).text();
-          selectedProducts.push(product);
-        });
-
-        // Send the selectedProducts array to the server-side endpoint or API
-        // for sending the WhatsApp message
-        $.ajax({
-          type: 'POST',
-          url: 'https://api.whatsapp.com/send?phone', // Replace with your server-side endpoint
-          data: JSON.stringify(selectedProducts),
-          contentType: 'application/json',
-          success: function(response) {
-            console.log('WhatsApp message sent successfully!');
-          },
-          error: function(xhr, status, error) {
-            console.error('Error sending WhatsApp message:', error);
-          }
-        });
-      });
-    });
-  </script>
+    <header>
+        <h1>Your Website Header</h1>
+        <!-- Add your navigation menu or other header content here -->
+    </header>
+    
+    <main>
+        <h2>Welcome to Your Website</h2>
+        <!-- Add your main content here -->
+        
+        <button onclick="sendOrderToWhatsApp()">Checkout</button>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+        <!-- Add your footer content here -->
+    </footer>
 </body>
 </html>
