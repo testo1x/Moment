@@ -290,6 +290,72 @@ a:hover {
 }
 
 
+
+
+
+
+
+
+ /* Additional styles */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 960px) {
+  .checkoutLayout {
+    padding: 15px;
+  }
+
+  .item img {
+    max-width: 80px;
+  }
+
+  .right {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .buttonCheckout {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .checkoutLayout {
+    padding: 10px;
+  }
+
+  .item img {
+    max-width: 60px;
+  }
+
+  .right {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .buttonCheckout {
+    font-size: 12px;
+  }
+}
+
+/* Additional styles for product cards */
+.product-card {
+  margin-bottom: 20px; /* Adds spacing between cards */
+}
+
  
 </style>
 <script src="checkout.js"></script>
