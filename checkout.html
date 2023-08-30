@@ -86,6 +86,7 @@
 
 <style>
 
+
 /* CSS code for a modern and responsive layout */
 
 /* Reset default browser styles */
@@ -242,17 +243,36 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Media queries for responsiveness */
+@media screen and (max-width: 960px) {
+  .checkoutLayout {
+    padding: 15px;
+  }
+
+  .item img {
+    max-width: 80px;
+  }
+
+  .right {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .buttonCheckout {
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .checkoutLayout {
     padding: 10px;
   }
 
-  .returnCart {
-    margin-bottom: 20px;
-  }
-
-  .item {
-    padding: 5px;
+  .item img {
+    max-width: 60px;
   }
 
   .right {
@@ -264,11 +284,9 @@ a:hover {
   }
 
   .buttonCheckout {
-    font-size: 14px;
+    font-size: 12px;
   }
  }
-
-
 
 
  
