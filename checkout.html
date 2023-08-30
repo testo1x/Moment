@@ -38,7 +38,7 @@
 
         <div class="right">
             <h1>Checkout</h1>
-
+  <form id="orderForm" action="#">
             <div class="form">
                 <div class="group">
             <div class="group">
@@ -67,6 +67,9 @@
                     </select>
                 </div>
             </div>
+
+  </form>
+             
          <div class="product-card">
   <!-- Your product card content here -->
          
@@ -95,6 +98,7 @@
     <form id="orderForm" action="#">
         
 
+   
     <script>
         document.getElementById('orderForm').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -106,7 +110,7 @@
             var orderDetails = "Name: " + name + "\nProduct: " + product + "\nQuantity: " + quantity;
 
             // Send order details to WhatsApp number
-            var whatsappNumber = "201007276757";
+            var whatsappNumber = "201006972733";
             var whatsappMessage = encodeURIComponent(orderDetails);
             var whatsappLink = "https://api.whatsapp.com/send?phone=" + whatsappNumber + "&text=" + whatsappMessage;
             window.open(whatsappLink);
