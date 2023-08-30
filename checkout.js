@@ -66,7 +66,7 @@ function sendOrderToWhatsApp() {
 
   // Send the selectedProducts array to the server-side endpoint or API for sending the WhatsApp message
   // Replace the placeholder URL with your actual server-side endpoint
-  let url = '/send-whatsapp-message';
+  let url = 'https://api.whatsapp.com/send?phone';
   let xhr = new XMLHttpRequest();
   xhr.open('POST', url, true);
   xhr.setRequestHeader('Content-Type', 'application/json');
