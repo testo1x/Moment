@@ -84,7 +84,147 @@
     </div>
 </div>
 
+<style>
 
+
+/* CSS code for responsive layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.checkoutLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.returnCart {
+  text-align: center;
+}
+
+.returnCart a {
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.item {
+  display: grid;
+  grid-template-areas:
+    "image name price"
+    "image . ."
+    "quantity returnPrice";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.item img {
+  grid-area: image;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+.info {
+  grid-area: name;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.price {
+  grid-area: price;
+}
+
+.quantity {
+  grid-area: quantity;
+}
+
+.returnPrice {
+  grid-area: returnPrice;
+}
+
+.right {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-gap: 10px;
+}
+
+label {
+  text-align: right;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 5px;
+}
+
+.return {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonCheckout {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Additional styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+ }
+
+
+
+
+ 
+</style>
 <script src="checkout.js"></script>
 
 </body>
